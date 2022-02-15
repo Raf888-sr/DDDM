@@ -1,5 +1,5 @@
 numpy
-pandas==1.4.0
+pandas
 plotly==4.14.3
 seaborn==0.10.1
 streamlit==0.79.0
