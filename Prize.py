@@ -350,8 +350,8 @@ elif options == "By Age and Gender":
 
     st.title("Nobel Prize By Age Group and Gender")
     st.subheader("This page inspects the distribution of the age of Nobel Prize Winners based on their gender. Use the slider and selection box to filter by age and gender respectively.")
-    min_age = nobel['age'].min()
-    max_age = nobel['age'].max()
+    min_age = int(nobel['age'].min())
+    max_age = int(nobel['age'].max())
 
 
     col9,col10 = st.columns([1,1])
