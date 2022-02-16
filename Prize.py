@@ -54,6 +54,7 @@ if options == "Introduction":
     with col2:
         st.markdown("""
         <p><img style="float: right;margin:0.5px 20px 10px 20px; max-width: 200px;height: 220px;display: inline-block" src="http://assets.stickpng.com/images/587516c119ef112e47c6964d.png"></p>""",unsafe_allow_html=True)
+        #http://assets.stickpng.com/images/587516c119ef112e47c6964d.png
 
 
     st.markdown("--------")
