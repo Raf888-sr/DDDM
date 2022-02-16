@@ -33,8 +33,8 @@ def get_data():
     return df
 nobel = get_data()
 
-min_year = nobel['year'].min()
-max_year = nobel['year'].max()
+min_year = int(nobel['year'].min())
+max_year = int(nobel['year'].max())
 
 
 if options == "Introduction":
@@ -141,7 +141,7 @@ elif options == "By Category":
     col5,col6 = st.columns([1,1])
 
     with col5:
-        year = st.slider("Select Time Period",min_year,max_year,value=[min_year,max_year])
+        year = st.slider("Select Time Period",int(min_year),int(max_year),value=[min_year,max_year])
 
         df_field = nobel[(nobel['year']>=int(year[0])) & (nobel['year']<=int(year[1]))]
         # grouped = df_field.groupby('category',as_index=False).size()
