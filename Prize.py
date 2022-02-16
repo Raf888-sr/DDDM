@@ -71,7 +71,7 @@ if options == "By Country":
 
     slider_year = st.slider("Select Time Period",min_year,max_year,value=[min_year,max_year])
 
-    df_selected = nobel[(nobel['year']>=slider_year[0]) & (nobel['year']<=slider_year[1])]
+    df_selected = nobel[(nobel['year']>=int(slider_year[0])) & (nobel['year']<=int(slider_year[1]))]
 
     top_countries = df_selected['birth_country'].value_counts().head(10)
     country_names = top_countries.index
@@ -143,7 +143,7 @@ elif options == "By Category":
     with col5:
         year = st.slider("Select Time Period",min_year,max_year,value=[min_year,max_year])
 
-        df_field = nobel[(nobel['year']>=year[0]) & (nobel['year']<=year[1])]
+        df_field = nobel[(nobel['year']>=int(year[0])) & (nobel['year']<=int(year[1]))]
         # grouped = df_field.groupby('category',as_index=False).size()
 
     with col6:
@@ -362,7 +362,7 @@ elif options == "By Age and Gender":
     with col10:
         gender_selection = st.selectbox("Select Gender:",['Female','Male','Both'])
 
-    age_gender_df = nobel[(nobel['age']>=age_slider[0]) & (nobel['age']<=age_slider[1])]
+    age_gender_df = nobel[(nobel['age']>=int(age_slider[0])) & (nobel['age']<=int(age_slider[1]))]
 
     if gender_selection != "Both":
         st.subheader(f"Age Distribution For {gender_selection} Nobel Prize Winners")
@@ -381,7 +381,7 @@ elif options == "By Age and Gender":
     st.subheader("Number of Female and Male Nobel Prize Based on Age Range")
     col11,col12 = st.columns([1,1])
 
-    age_gender_df = nobel[(nobel['age']>=age_slider[0]) & (nobel['age']<=age_slider[1])]
+    age_gender_df = nobel[(nobel['age']>=int(age_slider[0])) & (nobel['age']<=int(age_slider[1]))]
 
     with col11:
             st.write(f"""
