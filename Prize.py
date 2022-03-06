@@ -53,7 +53,7 @@ if options == "Introduction":
         """,unsafe_allow_html=True)
     with col2:
         st.markdown("""
-        <p><img style="float: right;margin:0.5px 20px 10px 20px; max-width: 200px;height: 220px;display: inline-block" src="nbl.png"></p>""",unsafe_allow_html=True)
+        <p><img style="float: right;margin:0.5px 20px 10px 20px; max-width: 200px;height: 220px;display: inline-block" src="https://github.com/Raf888-sr/DDDM/blob/nobel_prizes/Nobel_medal.png?raw=true"></p>""",unsafe_allow_html=True)
         #http://assets.stickpng.com/images/587516c119ef112e47c6964d.png
 
 
